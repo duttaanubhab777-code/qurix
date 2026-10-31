@@ -1,2 +1,4 @@
-# qurix
-Qurix a quize app
+# Qurix
+Qurix a quiz + online test + study material app
+
+It is building now
