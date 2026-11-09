@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+<title id="t">Qurix logical entity relationship</title><desc id="d">Qurix technical documentation diagram.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2ff"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity=".10"/></filter>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#64748b"/></marker>
+ <style>
+ .h{font:700 27px Inter,Segoe UI,Arial,sans-serif;fill:#0f172a}.sub{font:14px Inter,Segoe UI,Arial,sans-serif;fill:#475569}
+ .l{font:700 17px Inter,Segoe UI,Arial,sans-serif;fill:#0f172a}.s{font:13px Inter,Segoe UI,Arial,sans-serif;fill:#334155}.t{font:12px Inter,Segoe UI,Arial,sans-serif;fill:#475569}
+ .n{stroke:#cbd5e1;stroke-width:1.4;filter:url(#shadow)}.a{stroke:#64748b;stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+ </style>
+</defs>
+<rect width="1200" height="630" rx="22" fill="url(#bg)"/>
+<text x="48" y="52" class="h">Qurix logical entity relationship</text><text x="48" y="78" class="sub">QURIX • TARGET ARCHITECTURE • CONCEPTUAL DESIGN</text>
+
+<rect x="50" y="115" width="205" height="92" rx="12" fill="#dbeafe" class="n"/><text x="152" y="145" text-anchor="middle" class="l">User</text><text x="70" y="172" class="t">_id • email • role</text><text x="70" y="190" class="t">status • timestamps</text>
+<rect x="50" y="285" width="205" height="92" rx="12" fill="#dcfce7" class="n"/><text x="152" y="315" text-anchor="middle" class="l">Subject</text><text x="70" y="342" class="t">_id • name • code</text><text x="70" y="360" class="t">isActive</text>
+<rect x="50" y="455" width="205" height="92" rx="12" fill="#dcfce7" class="n"/><text x="152" y="485" text-anchor="middle" class="l">Chapter</text><text x="70" y="512" class="t">subjectId • title</text><text x="70" y="530" class="t">classLevel • order</text>
+<rect x="350" y="285" width="225" height="120" rx="12" fill="#fef3c7" class="n"/><text x="462" y="315" text-anchor="middle" class="l">Question</text><text x="370" y="344" class="t">subjectId • chapterId</text><text x="370" y="363" class="t">content • answer • solution</text><text x="370" y="382" class="t">status • version • assets</text>
+<rect x="665" y="115" width="220" height="92" rx="12" fill="#ede9fe" class="n"/><text x="775" y="145" text-anchor="middle" class="l">Exam</text><text x="685" y="172" class="t">_id • code • category</text><text x="685" y="190" class="t">isActive</text>
+<rect x="665" y="285" width="220" height="105" rx="12" fill="#ede9fe" class="n"/><text x="775" y="315" text-anchor="middle" class="l">ExamBlueprint</text><text x="685" y="344" class="t">examId • version • sections</text><text x="685" y="363" class="t">duration • markingRules</text>
+<rect x="975" y="285" width="180" height="105" rx="12" fill="#ffedd5" class="n"/><text x="1065" y="315" text-anchor="middle" class="l">Test</text><text x="990" y="344" class="t">blueprintId</text><text x="990" y="363" class="t">questionSnapshots</text>
+<rect x="975" y="455" width="180" height="92" rx="12" fill="#fce7f3" class="n"/><text x="1065" y="485" text-anchor="middle" class="l">TestAttempt</text><text x="990" y="512" class="t">testId • userId</text><text x="990" y="530" class="t">responses • state</text>
+<rect x="665" y="455" width="220" height="92" rx="12" fill="#fce7f3" class="n"/><text x="775" y="485" text-anchor="middle" class="l">Result</text><text x="685" y="512" class="t">attemptId • score</text><text x="685" y="530" class="t">breakdown • version</text>
+<rect x="350" y="455" width="225" height="92" rx="12" fill="#e0f2fe" class="n"/><text x="462" y="485" text-anchor="middle" class="l">UploadBatch / Asset</text><text x="370" y="512" class="t">createdBy • batchId</text><text x="370" y="530" class="t">storageKey • questionId</text>
+<path d="M152 207 V275 M152 377 V445 M255 331 H340 M575 345 H655 M775 207 V275 M885 337 H965 M1065 390 V445 M975 501 H895 M462 405 V445" class="a"/>
+<text x="270" y="320" class="t">1 : N</text><text x="595" y="330" class="t">metadata refs</text><text x="900" y="320" class="t">1 : N</text>
+<text x="600" y="600" text-anchor="middle" class="t">Logical relationships — choose embedding or ObjectId references based on access patterns.</text>
+
+</svg>
