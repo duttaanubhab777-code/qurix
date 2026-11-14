@@ -2,12 +2,17 @@
   "name": "qurix",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-    
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm -r --parallel dev",
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "build": "pnpm --filter client build",
+    "dev:server": "pnpm --filter server dev",
+    "dev:client": "pnpm --filter client dev"
   },
   "keywords": [],
   "author": "Anubhab Dutta",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module",
+  "private": "true"
 }
